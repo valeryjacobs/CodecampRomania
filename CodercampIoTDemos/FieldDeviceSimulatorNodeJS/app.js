@@ -1,10 +1,11 @@
 'use strict';
+var secrets = require('./secrets.js');
 
 var clientFromConnectionString = require('azure-iot-device-mqtt').clientFromConnectionString;
 var Message = require('azure-iot-device').Message;
-var connectionString = 'HostName=vjiot.azure-devices.net;DeviceId=Device00000001;SharedAccessKey=pLwiv8chaNjIesQYOUWISH276Ao6TUUpYTQUI=';
+var connectionString = secrets.deviceConnectionString;
 var client = clientFromConnectionString(connectionString);
-console.log('Starting simulation with a 2 second interval');
+console.log('Starting simulation with a 2 second message interval');
 
 var tid = setInterval(sendMessage, 2000);
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using Microsoft.ServiceBus.Messaging;
+using System.Configuration;
 
 namespace FieldDeviceSimulator
 {
@@ -34,7 +35,7 @@ namespace FieldDeviceSimulator
             }
 
             // Create event hub connection.
-            var eventHubConnectionString = @"Endpoint=sb://codecampingress.servicebus.windows.net/;SharedAccessKeyName=FieldDeviceHubPolicy;SharedAccessKey=vUdPTfdaNRnOiwyqzZqIw+k+8jfD+b3Y4xAqlkccivY=;EntityPath=fielddeviceshub";
+            var eventHubConnectionString = ConfigurationManager.ConnectionStrings["eventHubConnectionString"].ConnectionString;
             var eventHubClient = EventHubClient.CreateFromConnectionString(eventHubConnectionString);
 
             using (var ms = new MemoryStream())
