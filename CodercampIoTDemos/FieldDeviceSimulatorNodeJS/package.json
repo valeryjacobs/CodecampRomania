@@ -1,0 +1,12 @@
+{
+  "name": "field-device-simulator-node-js",
+  "version": "0.0.0",
+  "description": "FieldDeviceSimulatorNodeJS",
+  "main": "app.js",
+  "dependencies": {
+    "azure-iot-device-mqtt": "^1.1.6"
+  },
+  "author": {
+    "name": "Venturi"
+  }
+}

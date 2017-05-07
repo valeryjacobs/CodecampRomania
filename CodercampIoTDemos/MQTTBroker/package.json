@@ -1,0 +1,9 @@
+{
+  "name": "mqttbroker",
+  "version": "0.0.0",
+  "description": "MQTTBroker",
+  "main": "app.js",
+  "author": {
+    "name": "Venturi"
+  }
+}
